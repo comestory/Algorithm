@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class charaterInfo
+public class CharaterInfo
 {
     //restart value
     public int life;
@@ -19,7 +19,7 @@ public class CharaterManager : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
-        charaterInfo charaterinfo = new charaterInfo();
+        CharaterInfo charaterinfo = new CharaterInfo();
         charaterinfo.life = 1;
     }
 }

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CheckCode : MonoBehaviour {
 
-    GameObject Hyerim;
-    int TOEICScore = 0;
+	GameObject Hyerim;
+	int TOEICScore = 0;
 
 	// Use this for initialization
 	void Start () {
