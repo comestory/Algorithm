@@ -121,17 +121,22 @@ public partial class GameManager : MonoBehaviour{
 		
 	}
 	//start animation
-	IEnumerator MapAnimation(int tilevalue)
+	private IEnumerator MapAnimation(int tilevalue)
 	{
 		for (int tilenum = 0; tilenum < tilevalue; tilenum++)
 		{
 			GameObject tileBox = mapPos.transform.GetChild(tilenum).gameObject;
 
 			LeanTween.moveLocalY(tileBox, 0.5f, 0.2f);
+
 			yield return new WaitForSeconds(0.2f);
+
 			LeanTween.moveLocalY(tileBox, 0, 0.2f);
 		}
-		userChar = Instantiate(Resources.Load("Prefab/Charater/" + "SimplePeople_Police_White") as GameObject);
+
+		string loadPath = "Prefab/Charater/SimplePeople_Police_White";
+		userChar = Instantiate(Resources.Load(loadPath) as GameObject);
+
 		userChar.transform.position = characterSpwaner.transform.position;
 		userChatInfo = userChar.GetComponent<Charater>();
 		playerPos = new PlayerInfo(0, 0);
