@@ -1,8 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.UI;
-using UnityEngine.EventSystems;
 
 public partial class GameManager : MonoBehaviour{
 
@@ -27,7 +25,7 @@ public partial class GameManager : MonoBehaviour{
     }
     public void StopButton()
     {
-        playerMotion = new List<buttonstatus>();
+        playerMotion = new List<ButtonStatus>();
         ChangePalyButton(false);
         StopCoroutine(playerCo);
         playerCo = null;
@@ -40,17 +38,17 @@ public partial class GameManager : MonoBehaviour{
         {
             switch (playerMotion[i])
             {
-                case buttonstatus.leftSpin:
+                case ButtonStatus.leftSpin:
                     LeanTween.rotateLocal(userChar, new Vector3(0, userChatInfo.SetCharacterRotate(true), 0), 0.4f);
                     rotateValue = nowPos.z - 90;
                     break;
-                case buttonstatus.rightSpin:
+                case ButtonStatus.rightSpin:
                     LeanTween.rotateLocal(userChar, new Vector3(0, userChatInfo.SetCharacterRotate(false), 0), 0.4f);
                     rotateValue = nowPos.z + 90;
                     break;
-                case buttonstatus.roop:
+                case ButtonStatus.roop:
                     break;
-                case buttonstatus.step:
+                case ButtonStatus.step:
                     Debug.Log(userChatInfo.nowDirection+"asdhflkd");
                     if (userChatInfo.nowDirection == Charater.UserDirection.North)
                     {

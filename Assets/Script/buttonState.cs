@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum buttonstatus
+public enum ButtonStatus
 {
-    rightSpin = 0,
-    leftSpin,
-    step,
-    roop,
-    end
+	rightSpin = 0,
+	leftSpin,
+	step,
+	roop,
+	end
 }
 
-public class buttonState : MonoBehaviour {
+public class ButtonState : MonoBehaviour {
 
-    public buttonstatus state;
+	public ButtonStatus state;
 
 	// Use this for initialization
 	void Start () {
